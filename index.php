@@ -24,7 +24,7 @@ include_once __DIR__ . "/db.php";
             Catalogo film in uscita
         </h1>
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-5">
                 <?php foreach ($movies as $movie) : ?>
                     <div class="col">
                         <div class="card border-0 ">
