@@ -24,23 +24,23 @@ include_once __DIR__ . "/db.php";
             Catalogo film in uscita
         </h1>
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 g-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
                 <?php foreach ($movies as $movie) : ?>
                     <div class="col">
                         <div class="card border-0 ">
                             <div class="card_top pb-2">
                                 <img class="img-fluid" src="<?= $movie->poster ?>" alt="<?= $movie->title ?>">
                             </div>
-                            <div class="card_bottom">
+                            <div class="card_bottom px-2 pb-2">
                                 <h3>
                                     <?= $movie->title ?>
                                 </h3>
-                                <small>
+                                <small style="color: grey;">
                                     Genere: 
                                     <?= $movie->genre ?>
                                     <br>
                                     Uscita: 
-                                    <?= $movie->year ?>
+                                    <?= $movie->getDate() ?>
                                 </small>
                                 <div class="description mt-3" style="height: 200px; overflow: auto;">
                                     <p><?= $movie->description ?></p>

@@ -17,6 +17,11 @@ class Movie
         $this->genre = $genre;
         $this->year = $year;
     }
+
+    public function getDate()
+    {
+        return $this->year;
+    }
 }
 
 $movies = [
